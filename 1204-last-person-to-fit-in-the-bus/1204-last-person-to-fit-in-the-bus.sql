@@ -2,9 +2,9 @@
 SELECT q1.person_name
 FROM Queue q1 JOIN Queue q2 ON q1.turn >= q2.turn
 GROUP BY q1.turn
-HAVING SUM(q2.weight) <= 1000
-ORDER BY SUM(q2.weight) DESC
-LIMIT 1
+HAVING SUM(q2.weight) <= 1000 -- 몸무게가 1000될때까지 더하기
+ORDER BY SUM(q2.weight) DESC -- 몸무게 합(최소1000임) 내림차순 
+LIMIT 1 -- 마지막 승객만 출력
 
 
 # 2
