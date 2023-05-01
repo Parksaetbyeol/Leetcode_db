@@ -12,7 +12,7 @@ WITH T1 AS(
     T3 AS(
         SELECT id
         FROM T2
-        WHERE id_diff IN(SELECT id_diff FROM T2 
+        WHERE id_diff IN (SELECT id_diff FROM T2 
                             WHERE id_diff_order > 2
                             GROUP BY id_diff)
         )
