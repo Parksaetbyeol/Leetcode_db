@@ -15,7 +15,7 @@
 #                 break
                 
                 
-# 2
+# 2 - Runtime: 84 ms, faster than 43.60% of Python3
 class Solution:
     def twoSum(self, nums: List[int], target: int) -> List[int]:
         prevMap = {} # val : index
