@@ -1,6 +1,6 @@
 CREATE FUNCTION getNthHighestSalary(n INT) RETURNS INT
 BEGIN
-    SET n = n-1;
+    SET n = n-1; -- SET @변수명 = 변수값;
     RETURN (
         SELECT DISTINCT(salary)
         FROM Employee 
@@ -8,3 +8,4 @@ BEGIN
         LIMIT 1 OFFSET N -- OFFSET N번째 부터 LIMIT 1개 출력
             );
 END
+
