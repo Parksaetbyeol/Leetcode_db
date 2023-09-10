@@ -8,7 +8,7 @@
 # GROUP BY s.user_id
 
 
-# 2
+# 2 Runtime: 1379 ms, Memory Usage: 0B
 SELECT s.user_id,
        IFNULL(
            ROUND(SUM(CASE WHEN c.action = 'confirmed' THEN 1 ELSE 0 END) / COUNT(c.user_id), 2),
